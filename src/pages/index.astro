@@ -1,11 +1,44 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Image from "astro/components/Image.astro";
+import Layout from "../layouts/Layout.astro";
+import profilepicture from "../assets/profilepicture.jpg";
+import Section from "../components/Section.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+  <!-- Hero section -->
+  <div class="flex flex-1 items-center justify-center" slot="hero">
+    <div class="flex flex-col items-start">
+      <p class="text-4xl leading-16">
+        <span class="text-secondary-800">Hej, jestem</span><br />
+        <span
+          class="from-primary-600 to-accent-600 bg-linear-to-r bg-clip-text text-8xl font-bold text-transparent"
+          >Dawid Popiel.</span
+        ><br />
+        <span class="font-semibold">Tworzę strony internetowe.</span>
+      </p>
+      <a
+        href="#kontakt"
+        class="bg-primary-500 hover:bg-primary-600 mt-12 rounded-lg px-9 py-4 text-xl transition-all hover:translate-x-2"
+        >Skontaktuj się ze mną</a
+      >
+      <a
+        href="#omnie"
+        class="bg-secondary-200 hover:bg-secondary-300 mt-7 rounded-lg px-9 py-4 text-xl transition-all hover:translate-x-2"
+        >Poznaj mnie</a
+      >
+    </div>
+    <div>
+      <Image
+        src={profilepicture}
+        alt="Ilustracja programisty"
+        class="border-accent-400 ml-28 w-[26rem] rounded-full border-2"
+      />
+    </div>
+  </div>
+  <!-- About me -->
+  <Section title="O mnie" id="omnie" />
 </Layout>
