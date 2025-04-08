@@ -1,8 +1,16 @@
 ---
-const { title, ...props } = Astro.props;
+import type {HTMLAttributes} from "astro/types";
+
+interface Props extends HTMLAttributes<'section'> {
+    title: string;
+    subtitle?: string;
+}
+
+const { title, subtitle, ...props } = Astro.props;
 ---
 
-<section class="flex flex-col px-3 py-10" {...props}>
-  {title && <h2 class="mb-12 text-center text-4xl font-bold">{title}</h2>}
-  <slot />
+<section class={`flex flex-col px-3 py-16 container mx-auto ${props.class}`} {...props}>
+  {subtitle && <p class="uppercase text-primary-600 tracking-wide font-bold text-md">{subtitle}</p>}
+  <h2 class="mt-3 mb-12 text-5xl font-bold">{title}</h2>
+  <p class="text-xl leading-normal"><slot /></p>
 </section>

@@ -22,10 +22,12 @@ const hasHero = Astro.slots.has("hero");
       rel="stylesheet"
     />
   </head>
-  <body class="bg-background text-text flex min-h-screen flex-col">
+  <body
+    class="from-primary-400/30 to-accent-400/30 text-text flex min-h-screen flex-col bg-gradient-to-br via-transparent bg-fixed"
+  >
     {
       hasHero ? (
-        <div class="after:bg-amber-500-600 from-primary-400/30 to-accent-400/30 dupa border-accent-200 relative flex min-h-dvh flex-col border-b-2 bg-gradient-to-br via-transparent">
+        <div class="relative flex min-h-dvh flex-col bg-transparent">
           <Navbar />
           <slot name="hero" />
         </div>
@@ -33,7 +35,7 @@ const hasHero = Astro.slots.has("hero");
         <Navbar />
       )
     }
-    <main class="flex flex-1 flex-col">
+    <main class="flex flex-1 flex-col py-24 gap-48">
       <slot />
     </main>
     <Footer />
