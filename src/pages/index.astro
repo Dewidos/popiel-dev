@@ -2,6 +2,7 @@
 import Image from "astro/components/Image.astro";
 import Layout from "../layouts/Layout.astro";
 import profilepicture from "../assets/profilepicture.jpg";
+import freelancerIllustration from "../assets/freelancer_illustration.png";
 import Section from "../components/Section.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -11,6 +12,13 @@ import Section from "../components/Section.astro";
 <Layout>
   <!-- Hero section -->
   <div class="flex flex-1 items-center justify-center" slot="hero">
+    <div>
+      <Image
+        src={freelancerIllustration}
+        alt="Ilustracja freelancera"
+        class="mr-32 w-[30rem]"
+      />
+    </div>
     <div class="flex flex-col items-start">
       <p class="text-4xl leading-16">
         <span class="text-secondary-800">Hej, jestem</span><br />
@@ -31,19 +39,31 @@ import Section from "../components/Section.astro";
         >Poznaj mnie</a
       >
     </div>
-    <div>
-      <Image
-        src={profilepicture}
-        alt="Ilustracja programisty"
-        class="border-accent-400 ml-28 w-[26rem] rounded-full border-2"
-      />
-    </div>
   </div>
   <!-- About me -->
   <Section title="O mnie" subtitle="Poznajmy się" id="omnie">
-    Jestem freelancerem, który tworzy strony internetowe. Swoje projekty wykonuję z sercem i ogromną pasją. Korzystam z najnowszych technologii tak, aby projekty były wykonane jak najlepiej i zgodnie ze sztuką.
+    <p class="text-xl leading-normal">
+      Jestem młodym, pełnym zapału pasjonatem informatyki. Tworzeniem stron
+      internetowych zainteresowałem się już w wieku 7 lat, chcąc naśladować
+      mojego tatę. Strony małego Dawidka, jeśli w ogóle można je było nazwać
+      stronami, pozostawiały wiele do życzenia, jednak ciągły rozwój i
+      samodoskonalenie pozwoliły mi dotrzeć do miejsca, w którym jestem teraz.
+    </p>
+    <p class="mt-6 text-xl leading-normal">
+      Jakie jest moje drugie ja? Kocham jazdę na rowerze - uwielbiam przemierzać
+      długie kilometry, a także skakać na rowerze górskim. Mam grupę kolegów,
+      którzy wspierają mnie w swojej pasji, za co jestem im wdzięczny. Lubię
+      także słuchać muzyki, czytać książki, grać w gry wideo i oglądać filmy z
+      moją rodziną.
+    </p>
+    <Image
+      src={profilepicture}
+      alt="Zdjęcie Dawida Popiela"
+      class="border-secondary-400 ml-28 w-[24rem] rounded-full border-2"
+      slot="image"
+    />
   </Section>
   <Section title="Umiejętności" subtitle="Co potrafię?" id="umiejetnosci">
-    Wykorzystuję najnowsze technologie, aby moje projekty były jak najlepsze. Wykonuję projekty w React, Next.js, Tailwind CSS, Astro i wiele innych. Wykonuję również projekty w WordPressie.
+    <p class="text-xl leading-normal"></p>
   </Section>
 </Layout>
