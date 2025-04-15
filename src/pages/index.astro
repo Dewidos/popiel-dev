@@ -4,6 +4,8 @@ import Layout from "../layouts/Layout.astro";
 import profilepicture from "../assets/profilepicture.jpg";
 import freelancerIllustration from "../assets/freelancer_illustration.png";
 import Section from "../components/Section.astro";
+import { Icon } from "astro-icon/components";
+import SkillIcon from "../components/SkillIcon.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -64,6 +66,56 @@ import Section from "../components/Section.astro";
     />
   </Section>
   <Section title="Umiejętności" subtitle="Co potrafię?" id="umiejetnosci">
-    <p class="text-xl leading-normal"></p>
+    <p class="mb-24 max-w-5xl text-xl leading-normal">
+      Lata nauki pozwoliły mi opanować wiele różnych technologii - języków
+      programowania, systemów zarządzania treścią (CMS) i bibliotek
+      wspierających pracę. Poniżej znajdziesz listę tych, które uznałem za
+      najważniejsze:
+    </p>
+    <div
+      class="grid grid-flow-row grid-cols-5 gap-y-28 *:mx-auto *:transition-transform *:duration-300 *:hover:scale-[1.15]"
+    >
+      <SkillIcon name="devicon:html5" size="100" tooltip="HTML5" />
+      <SkillIcon name="devicon:css3" size="100" tooltip="CSS3" />
+      <SkillIcon name="devicon:javascript" size="100" tooltip="JavaScript" />
+      <SkillIcon name="devicon:typescript" size="100" tooltip="TypeScript" />
+      <SkillIcon name="devicon:php" size="100" tooltip="PHP" />
+      <SkillIcon name="devicon:tailwindcss" size="100" tooltip="Tailwind CSS" />
+      <SkillIcon name="devicon:astro" size="100" tooltip="Astro" />
+      <SkillIcon name="devicon:react" size="100" tooltip="React" />
+      <SkillIcon name="devicon:svelte" size="100" tooltip="Svelte" />
+      <SkillIcon name="devicon:solidjs" size="100" tooltip="SolidJS" />
+      <SkillIcon name="devicon:wordpress" size="100" tooltip="WordPress" />
+      <SkillIcon name="devicon:sanity" size="100" tooltip="Sanity.io" />
+      <SkillIcon name="devicon:laravel" size="100" tooltip="Laravel" />
+      <SkillIcon
+        name="devicon:amazonwebservices-wordmark"
+        size="100"
+        tooltip="Amazon Web Services"
+      />
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 256 291"
+        class="w-[100px]"
+        id="nginx-icon"
+        ><!-- Icon from SVG Logos by Gil Barbara - https://raw.githubusercontent.com/gilbarbara/logos/master/LICENSE.txt -->
+        <path
+          fill="#009639"
+          d="M2.054 218.187c1.32 2.347 3.227 4.108 5.575 5.428l112.962 65.137c4.695 2.787 10.416 2.787 14.964 0l112.963-65.137c4.695-2.64 7.482-7.629 7.482-13.057V80.284c0-5.428-2.787-10.416-7.482-13.056L135.555 2.09c-4.694-2.788-10.416-2.788-14.964 0L7.63 67.228C2.787 69.868 0 74.856 0 80.284v130.42c0 2.642.587 5.136 2.054 7.483"
+        ></path><path
+          fill="#FFF"
+          d="M91.837 195.154a14.463 14.463 0 0 1-14.524 14.524a14.463 14.463 0 0 1-14.523-14.524V95.542c0-7.776 6.895-14.084 16.43-14.084c6.896 0 14.965 2.787 19.806 8.802l4.4 5.282l60.737 72.618V95.835a14.463 14.463 0 0 1 14.524-14.524a14.463 14.463 0 0 1 14.523 14.524v99.613c0 7.775-6.895 14.083-16.43 14.083c-6.896 0-14.965-2.787-19.806-8.802l-65.137-77.754z"
+        ></path>
+      </svg>
+      <script>
+        import tippy from "tippy.js";
+
+        tippy("#nginx-icon", {
+          content: "Nginx",
+          animation: "shift-away",
+          offset: [0, 20],
+        });
+      </script>
+    </div>
   </Section>
 </Layout>

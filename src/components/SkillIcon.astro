@@ -1,0 +1,28 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Props {
+  name: string;
+  size: string;
+  tooltip: string;
+}
+
+const { name, size, tooltip, ...props } = Astro.props;
+---
+
+<Icon {name} {size} {...props} class="skill-icon" data-tooltip={tooltip} />
+
+<script>
+  import tippy from "tippy.js";
+
+  for (const icon of document.querySelectorAll(".skill-icon")) {
+    const tooltip = icon.getAttribute("data-tooltip");
+    if (!tooltip) continue;
+
+    tippy(icon, {
+      content: tooltip,
+      animation: "shift-away",
+      offset: [0, 20],
+    });
+  }
+</script>

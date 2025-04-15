@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import "tippy.js/dist/tippy.css";
+@import "tippy.js/animations/shift-away.css";
 
 @theme {
   --font-sans: "Lato", "sans-serif";
