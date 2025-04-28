@@ -67,32 +67,64 @@ import SkillIcon from "../components/SkillIcon.astro";
   </Section>
   <Section title="Umiejętności" subtitle="Co potrafię?" id="umiejetnosci">
     <p class="mb-24 max-w-5xl text-xl leading-normal">
-      Lata nauki pozwoliły mi opanować wiele różnych technologii - języków
-      programowania, systemów zarządzania treścią (CMS) i bibliotek
-      wspierających pracę. Poniżej znajdziesz listę tych, które uznałem za
-      najważniejsze:
+      Jak w każdym fachu - narzędzia są nieodłącznym elementem mojej pracy.
+      Pozwalają one na tworzenie szybkich, estetycznych i funkcjonalnych stron
+      internetowych. Oto mój ulubiony <em>techstack</em> - zbiór technologii wykorzystanych
+      w danym projekcie:
+    </p>
+    <div class="mx-auto flex w-full max-w-6xl items-center justify-between">
+      <div class="flex flex-col items-center justify-between gap-12 text-lg">
+        <Icon name="devicon:astro" size="140" />
+        <p>Astro</p>
+      </div>
+      <Icon name="tabler:plus" size="60" class="text-stone-400" />
+      <div class="flex flex-col items-center justify-between gap-12 text-lg">
+        <Icon name="devicon:sanity" size="140" />
+        <p>Sanity.io</p>
+      </div>
+      <Icon name="tabler:plus" size="60" class="text-stone-400" />
+      <div class="flex flex-col items-center justify-between gap-12 text-lg">
+        <Icon name="devicon:tailwindcss" size="140" />
+        <p>Tailwind CSS</p>
+      </div>
+    </div>
+    <div
+      class="mt-28 flex w-full max-w-6xl flex-col gap-7 text-xl leading-normal"
+    >
+      <p>
+        <strong>Astro</strong> - nowoczesna technologia, która pozwala tworzyć strony
+        internetowe niezwykle szybkie i lekkie. Dzięki Astro Twoja strona ładuje
+        się błyskawicznie, działa płynnie na każdym urządzeniu i jest lepiej oceniana
+        przez Google.
+      </p>
+      <p>
+        <strong>Sanity.io</strong> - system zarządzania treścią (CMS), który daje
+        Ci wygodny i niesamowicie prosty w obsłudze panel do samodzielnej edycji
+        strony. Możesz łatwo zmieniać teksty, zdjęcia i treści bez potrzeby ingerowania
+        w kod – szybko, intuicyjnie i bez stresu.
+      </p>
+      <p>
+        <strong>Tailwind CSS</strong> - narzędzie, które pozwala tworzyć nowoczesne,
+        przejrzyste i estetyczne strony. Dzięki niemu każdy projekt wygląda profesjonalnie,
+        jest spójny wizualnie i świetnie dopasowany do różnych urządzeń.
+      </p>
+    </div>
+    <p class="mt-28 mb-24 max-w-5xl text-xl leading-normal">
+      To jednak nie wszystkie narzędzia, z których zdarza mi się korzystać.
+      Poniżej wymieniłem najważniejsze z nich:
     </p>
     <div
       class="grid grid-flow-row grid-cols-5 gap-y-28 *:mx-auto *:transition-transform *:duration-300 *:hover:scale-[1.15]"
     >
-      <SkillIcon name="devicon:html5" size="100" tooltip="HTML5" />
-      <SkillIcon name="devicon:css3" size="100" tooltip="CSS3" />
-      <SkillIcon name="devicon:javascript" size="100" tooltip="JavaScript" />
-      <SkillIcon name="devicon:typescript" size="100" tooltip="TypeScript" />
-      <SkillIcon name="devicon:php" size="100" tooltip="PHP" />
-      <SkillIcon name="devicon:tailwindcss" size="100" tooltip="Tailwind CSS" />
-      <SkillIcon name="devicon:astro" size="100" tooltip="Astro" />
       <SkillIcon name="devicon:react" size="100" tooltip="React" />
       <SkillIcon name="devicon:svelte" size="100" tooltip="Svelte" />
-      <SkillIcon name="devicon:solidjs" size="100" tooltip="SolidJS" />
-      <SkillIcon name="devicon:wordpress" size="100" tooltip="WordPress" />
-      <SkillIcon name="devicon:sanity" size="100" tooltip="Sanity.io" />
-      <SkillIcon name="devicon:laravel" size="100" tooltip="Laravel" />
       <SkillIcon
-        name="devicon:amazonwebservices-wordmark"
+        name="devicon-plain:wordpress"
         size="100"
-        tooltip="Amazon Web Services"
+        tooltip="WordPress"
       />
+      <SkillIcon name="devicon:laravel" size="100" tooltip="Laravel" />
+      <SkillIcon name="devicon:github" size="100" tooltip="GitHub" />
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 256 291"
@@ -107,6 +139,14 @@ import SkillIcon from "../components/SkillIcon.astro";
           d="M91.837 195.154a14.463 14.463 0 0 1-14.524 14.524a14.463 14.463 0 0 1-14.523-14.524V95.542c0-7.776 6.895-14.084 16.43-14.084c6.896 0 14.965 2.787 19.806 8.802l4.4 5.282l60.737 72.618V95.835a14.463 14.463 0 0 1 14.524-14.524a14.463 14.463 0 0 1 14.523 14.524v99.613c0 7.775-6.895 14.083-16.43 14.083c-6.896 0-14.965-2.787-19.806-8.802l-65.137-77.754z"
         ></path>
       </svg>
+      <SkillIcon name="devicon:netlify" size="100" tooltip="Netlify" />
+      <SkillIcon name="devicon:vercel" size="100" tooltip="Vercel" />
+      <SkillIcon
+        name="devicon:amazonwebservices-wordmark"
+        size="100"
+        tooltip="Amazon Web Services"
+      />
+      <SkillIcon name="devicon:cloudflare" size="100" tooltip="Cloudflare" />
       <script>
         import tippy from "tippy.js";
 
@@ -117,5 +157,8 @@ import SkillIcon from "../components/SkillIcon.astro";
         });
       </script>
     </div>
+  </Section>
+  <Section title="Projekty" subtitle="Moje realizacje">
+    <p class="text-xl leading-normal">Hej 👋</p>
   </Section>
 </Layout>
